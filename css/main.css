@@ -1,0 +1,222 @@
+:root {
+  --mc: #9c2926;
+  --wc: #fff;
+}
+
+/* * {
+  outline: 1px solid pink;
+} */
+
+@font-face {
+  font-family: "jgj-B";
+  font-style: normal;
+  src: url('../font/YoonMingukB.otf');
+}
+
+@font-face {
+  font-family: "jgj-R";
+  font-style: normal;
+  src: url('../font/YoonMingukR.otf');
+}
+
+.container {
+  width: 1700px;
+  margin: 0 auto;
+}
+
+.Header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  line-height: 100px;
+  background: rgba(0, 0, 0, 0.3);
+  color: var(--wc);
+  z-index: 99;
+  opacity: 0;
+  animation: show 1s 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes show {
+  to {
+    opacity: 1;
+  }
+}
+
+.Header .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Header h1 {
+  font-size: 0;
+}
+
+.Header img {
+  width: 130px;
+}
+
+.Header .Gnb>ul {
+  display: flex;
+  gap: 50px;
+  letter-spacing: -0.025em;
+  font-size: 21px;
+}
+
+.Header .search {
+  font-size: 31px;
+}
+
+.MainVisual {
+  position: relative;
+  height: 100vh;
+  background: url(../img/main_bg.jpg) no-repeat fixed center center;
+}
+
+.MainVisual .title {
+  position: absolute;
+  width: 500px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 101;
+}
+
+.MainVisual::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: var(--mc);
+  z-index: 100;
+  animation: slide_up 1.8s 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slide_up {
+  to {
+    top: -100%;
+  }
+}
+
+.MainVisual .scroll_down {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 150px;
+  background: rgba(102, 102, 102, 0.5);
+  overflow: hidden;
+}
+
+.MainVisual .scroll_down .bar {
+  position: fixed;
+  font-size: 0;
+  display: block;
+  width: 2px;
+  height: 100px;
+  background: var(--wc);
+  animation: scroll_down 2s infinite;
+}
+
+@keyframes scroll_down {
+  0% {
+    top: 0
+  }
+
+  100% {
+    top: 100%
+  }
+}
+
+.Story {
+  text-align: center;
+  color: var(--wc);
+}
+
+.Story_text h2 {
+  font-size: 50px;
+  font-family: "jgj-B";
+  margin-bottom: 30px;
+}
+
+.Story_text p {
+  font-family: "jgj-R";
+  font-size: 21px;
+  line-height: 1.2;
+}
+
+.Story figure {
+  height: 100vh;
+}
+
+.Story .inner {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Story .title {
+  background: url('../img/sam.jpg') no-repeat center center/cover;
+}
+
+.Story .first {
+  background: url(../img/story01.jpg) no-repeat center center/cover;
+}
+
+.Story .second {
+  background: url(../img/story02.jpg) no-repeat center center/cover;
+}
+
+.Story .third {
+  background: url(../img/story03.jpg) no-repeat center center/cover;
+}
+
+.Story .fourth {
+  background: url(../img/story04.jpg) no-repeat center center/cover;
+}
+
+
+.Story .slider .slick-dots {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.Story .slider .slick-dots button {
+  display: none;
+}
+
+.Story .slider .slick-dots li {
+  display: inline-block;
+  margin: 5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--wc);
+  transition: 1s;
+}
+
+.Story .slider .slick-dots li.slick-active {
+  width: 30px;
+  height: 10px;
+  border-radius: 10px;
+}
+
+.Story .control i {
+  position: absolute;
+  bottom: 50px;
+  color: var(--wc);
+  font-size: 21px;
+}
+
+.Story .control i:nth-child(1) {
+  left: 60px;
+}

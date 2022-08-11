@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+address {
+  font-style: normal;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+body {
+  line-height: 1;
+  /*텍스트 높이만큼만 줄 공간을 줌*/
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+img {
+  /*그림을 텍스트 취급해서 margin이 약간 있음*/
+  vertical-align: middle;
+  max-width: 100%;
+}
+
+/*
+===선택자===
+자식선택자 A > B => 메뉴 만들 때 많이 씀 (A의 자식 모든 B)
+후손선택자 A '' B => 주로 쓰이는 선택자  (A의 후손 모든 B)
+<css에서는 부모선택자가 없다.>
+<javascript에는 '모든'이 내포되있지 않다.>
+인접형제선택자 => 인접한 형제만 선택
+형제선택자 => 형제(들)만 선택
+속성선택자
+*/
