@@ -237,6 +237,10 @@
   background: url(../img/story04.jpg) no-repeat center center/cover;
 }
 
+.Story span {
+  background: white!important;
+}
+
 .Won {
   position: relative;
   background: var(--mc);
