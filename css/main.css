@@ -3,9 +3,6 @@
   --wc: #fff;
 }
 
-/* * {
-  outline: 1px solid pink;
-} */
 
 @font-face {
   font-family: "jgj-B";
@@ -20,7 +17,7 @@
 }
 
 .container {
-  width: 1700px;
+  width: 1800px;
   margin: 0 auto;
 }
 
@@ -36,6 +33,53 @@
   opacity: 0;
   animation: show 1s 2s;
   animation-fill-mode: forwards;
+}
+
+
+.sideNav {
+  display: block;
+  position: fixed;
+  top: 50%;
+  left: 50px;
+  transform: translateY(-50%);
+}
+
+.sideNav {
+  position: fixed;
+  right: 100px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 999;
+}
+
+.sideNav ul>li {
+  width: 50px;
+}
+
+.sideNav ul>li a {
+  position: relative;
+  display: block;
+  height: 20px;
+  font-size: 0;
+}
+
+.sideNav ul>li a.w::after {
+  background: var(--wc);
+}
+
+.sideNav ul>li a::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 50%;
+  height: 2px;
+  background: var(--wc);
+  transition: width .5s;
+}
+
+.sideNavul>li.on a::after {
+  width: 100%;
 }
 
 @keyframes show {
@@ -64,8 +108,10 @@
   font-size: 21px;
 }
 
-.Header .search {
-  font-size: 31px;
+.Header .icons {
+  display: flex;
+  gap: 20px;
+  font-size: 25px;
 }
 
 .MainVisual {
@@ -138,18 +184,6 @@
   color: var(--wc);
 }
 
-.Story_text h2 {
-  font-size: 50px;
-  font-family: "jgj-B";
-  margin-bottom: 30px;
-}
-
-.Story_text p {
-  font-family: "jgj-R";
-  font-size: 21px;
-  line-height: 1.2;
-}
-
 .Story figure {
   height: 100vh;
 }
@@ -162,61 +196,178 @@
   align-items: center;
 }
 
-.Story .title {
-  background: url('../img/sam.jpg') no-repeat center center/cover;
+.Story .inner h2 {
+  opacity: 0;
+  font-size: 50px;
+  font-family: "jgj-B";
+  margin-bottom: 30px;
 }
 
-.Story .first {
+.Story .inner p {
+  opacity: 0;
+  font-family: "jgj-R";
+  font-size: 21px;
+  line-height: 1.2;
+}
+
+
+.Story figure.active .inner h2 {
+  opacity: 1;
+  transition: 1s 0.7s;
+}
+
+.Story figure.active .inner p {
+  opacity: 1;
+  transition: 1s 1.5s;
+}
+
+.Story figure:nth-child(1) {
   background: url(../img/story01.jpg) no-repeat center center/cover;
 }
 
-.Story .second {
-  background: url(../img/story02.jpg) no-repeat center center/cover;
-}
-
-.Story .third {
+.Story figure:nth-child(2) {
   background: url(../img/story03.jpg) no-repeat center center/cover;
 }
 
-.Story .fourth {
+.Story figure:nth-child(3) {
+  background: url(../img/sam.jpg) no-repeat center center/cover;
+}
+
+.Story figure:nth-child(4) {
   background: url(../img/story04.jpg) no-repeat center center/cover;
 }
 
+.Won {
+  position: relative;
+  background: var(--mc);
+}
 
-.Story .slider .slick-dots {
+
+.Won .jagi {
   position: absolute;
-  bottom: 50px;
+  top: 70%;
+  left: 47%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+.Won.on .jagi {
+  animation: disappear 1s;
+  animation-delay: 5s;
+  animation-fill-mode: forwards;
+}
+
+.Won .ingredients img {
+  position: absolute;
+  opacity: 0;
+  top: 30%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
+  z-index: 2;
 }
 
-.Story .slider .slick-dots button {
-  display: none;
+.Won.on .ingredients img {
+  animation: ingredients 2s;
+  animation-fill-mode: forwards;
 }
 
-.Story .slider .slick-dots li {
-  display: inline-block;
-  margin: 5px;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: var(--wc);
-  transition: 1s;
+.Won.on .ingredients img:nth-child(1) {
+  animation-delay: 0;
 }
 
-.Story .slider .slick-dots li.slick-active {
-  width: 30px;
-  height: 10px;
-  border-radius: 10px;
+.Won.on .ingredients img:nth-child(2) {
+  animation-delay: 0.5s;
 }
 
-.Story .control i {
+.Won.on .ingredients img:nth-child(3) {
+  animation-delay: 1.5s;
+}
+
+.Won.on .ingredients img:nth-child(4) {
+  animation-delay: 2s;
+}
+
+.Won.on .ingredients img:nth-child(5) {
+  animation-delay: 2.5s;
+}
+
+.Won.on .ingredients img:nth-child(6) {
+  animation-delay: 3s;
+}
+
+.Won .hongsamwon {
   position: absolute;
-  bottom: 50px;
-  color: var(--wc);
-  font-size: 21px;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+
 }
 
-.Story .control i:nth-child(1) {
-  left: 60px;
+.Won.on .hongsamwon {
+  animation: appear 1s;
+  animation-delay: 5s;
+  animation-fill-mode: forwards;
+
 }
+
+.Won.on .hongsamwon img{
+  position: relative;
+}
+
+.Won.on .hongsamwon::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 500px;
+  background: #fff;
+  border-radius: 50%;
+
+}
+
+.Won .text {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--wc);
+  font-size: 50px;
+  font-family: "jgj-B";
+  text-align: center;
+  line-height: 1.2;
+  opacity: 0;
+}
+
+.Won.on .text {
+  animation: appear 1.5s;
+  animation-delay: 5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes ingredients {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    top: 75%
+  }
+}
+
+@keyframes disappear {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes appear {
+  to {
+    opacity: 1;
+  }
+}
+
+
