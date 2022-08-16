@@ -4,13 +4,22 @@ $(function () {
     slidesNavigation: true,
     slidesNavPosition: 'bottom',
     loopHorizontal: false,
-
-    anchors: ['p01', 'p02', 'p03', 'p04', 'p05', 'P06'],
+    anchors: ['main', 'p01', 'p02', 'p03', 'p04', 'p05', 'p06'],
+    navigation: true,
+    navigationPosition: 'left',
+    navigationTooltips: ['Main', '홍삼이야기', '홍삼원', '에브리타임', '제품', '가맹문의'],
 
     afterLoad: function (origin, destination) {
+      if (destination.anchor != 'main') {
+        $('.Header').addClass('on')
+      } else {
+        $('.Header').removeClass('on')
+      }
+      destination.anchor == 'p02' ? $('.Won').addClass('on') : $('.Won').removeClass('on');
+      destination.anchor == 'p03' ?
+        $('.Every').addClass('on') && $('#fp-nav ul li').addClass('on')
+        : $('.Every').removeClass('on') && $('#fp-nav ul li').removeClass('on');
 
-      destination.anchor == 'p03' ? $('.Won').addClass('on') : $('.Won').removeClass('on')
-      
     }
 
   });
@@ -24,5 +33,17 @@ $(function () {
       fullpage_api.moveSlideRight();
     }
   });
+
+
+  $('.products_slide').slick({
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 3,
+    arrows: false,
+  })
+
+  $('.products_slide').slick('afterChange', function (e, s, c) {
+    console.log(s)``
+  })
 
 })

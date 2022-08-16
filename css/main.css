@@ -16,8 +16,7 @@
   src: url('../font/YoonMingukR.otf');
 }
 
-.container {
-  width: 1800px;
+.container{
   margin: 0 auto;
 }
 
@@ -30,56 +29,32 @@
   background: rgba(0, 0, 0, 0.3);
   color: var(--wc);
   z-index: 99;
+  padding: 0 100px;
   opacity: 0;
-  animation: show 1s 2s;
+  animation: show 0.5s 1.5s;
   animation-fill-mode: forwards;
 }
 
-
-.sideNav {
-  display: block;
-  position: fixed;
-  top: 50%;
-  left: 50px;
-  transform: translateY(-50%);
+.Header.on {
+  top: -100%;
+  transition: 0.8s;
 }
 
-.sideNav {
-  position: fixed;
-  right: 100px;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 999;
+#fp-nav ul li a span {
+  background: #fff;
 }
 
-.sideNav ul>li {
-  width: 50px;
+#fp-nav ul li.on a span {
+  background: var(--mc);
 }
 
-.sideNav ul>li a {
-  position: relative;
-  display: block;
-  height: 20px;
-  font-size: 0;
+#fp-nav ul li .fp-tooltip {
+  font-family: "jgj-R";
 }
 
-.sideNav ul>li a.w::after {
-  background: var(--wc);
-}
-
-.sideNav ul>li a::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 50%;
-  width: 50%;
-  height: 2px;
-  background: var(--wc);
-  transition: width .5s;
-}
-
-.sideNavul>li.on a::after {
-  width: 100%;
+#fp-nav ul li.on .fp-tooltip {
+  color: var(--mc);
+  font-family: "jgj-R";
 }
 
 @keyframes show {
@@ -95,6 +70,7 @@
 
 .Header h1 {
   font-size: 0;
+  width: 20%;
 }
 
 .Header img {
@@ -109,15 +85,22 @@
 }
 
 .Header .icons {
+  width: 20%;
+  justify-content: end;
   display: flex;
   gap: 20px;
   font-size: 25px;
+}
+
+.Header .icons a {
+  display: block;
 }
 
 .MainVisual {
   position: relative;
   height: 100vh;
   background: url(../img/main_bg.jpg) no-repeat fixed center center;
+
 }
 
 .MainVisual .title {
@@ -138,7 +121,7 @@
   height: 100vh;
   background: var(--mc);
   z-index: 100;
-  animation: slide_up 1.8s 0.5s;
+  animation: slide_up 1.5s 0.5s;
   animation-fill-mode: forwards;
 }
 
@@ -238,86 +221,110 @@
 }
 
 .Story span {
-  background: white!important;
+  background: white !important;
 }
 
-.Won {
+.Won{
+  overflow-x: hidden;
+}
+
+.Won .container {
+  display: flex;
+}
+
+.Won .container>div {
+  flex: 1;
+}
+
+.Won .right {
   position: relative;
-  background: var(--mc);
+  right: -100%
 }
 
+.Won.on .right {
+  right: 0;
+  transition: 1s 1s;
+}
 
-.Won .jagi {
+.Won .rear {
   position: absolute;
-  top: 70%;
-  left: 47%;
+  top: 55%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.Won .front {
+  position: absolute;
+  top: 55%;
+  left: 45%;
   transform: translate(-50%, -50%);
   z-index: 3;
 }
 
 .Won.on .jagi {
   animation: disappear 1s;
-  animation-delay: 5s;
+  animation-delay: 6s;
   animation-fill-mode: forwards;
 }
 
 .Won .ingredients img {
   position: absolute;
   opacity: 0;
-  top: 30%;
-  left: 50%;
+  top: 20%;
+  left: 54%;
   transform: translate(-50%, -50%);
   z-index: 2;
 }
 
 .Won.on .ingredients img {
-  animation: ingredients 2s;
+  animation: ingredients 2s 1.5s;
   animation-fill-mode: forwards;
 }
 
 .Won.on .ingredients img:nth-child(1) {
-  animation-delay: 0;
-}
-
-.Won.on .ingredients img:nth-child(2) {
-  animation-delay: 0.5s;
-}
-
-.Won.on .ingredients img:nth-child(3) {
-  animation-delay: 1.5s;
-}
-
-.Won.on .ingredients img:nth-child(4) {
   animation-delay: 2s;
 }
 
-.Won.on .ingredients img:nth-child(5) {
+.Won.on .ingredients img:nth-child(2) {
   animation-delay: 2.5s;
 }
 
-.Won.on .ingredients img:nth-child(6) {
+.Won.on .ingredients img:nth-child(3) {
   animation-delay: 3s;
+}
+
+.Won.on .ingredients img:nth-child(4) {
+  animation-delay: 3.5s;
+}
+
+.Won.on .ingredients img:nth-child(5) {
+  animation-delay: 4s;
+}
+
+.Won.on .ingredients img:nth-child(6) {
+  animation-delay: 4.5s;
 }
 
 .Won .hongsamwon {
   position: absolute;
-  top: 65%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   opacity: 0;
-
 }
 
 .Won.on .hongsamwon {
   animation: appear 1s;
-  animation-delay: 5s;
+  animation-delay: 7s;
   animation-fill-mode: forwards;
 
 }
 
-.Won.on .hongsamwon img{
+.Won.on .hongsamwon img {
   position: relative;
 }
+
 
 .Won.on .hongsamwon::before {
   content: "";
@@ -325,30 +332,41 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 500px;
-  height: 500px;
-  background: #fff;
+  width: 800px;
+  height: 800px;
+  background: url(../img/raylights_red.png) no-repeat center center/cover;
   border-radius: 50%;
-
 }
 
-.Won .text {
+.Won .left {
+  position: relative;
+  left: -100%
+}
+
+.Won.on .left {
+  left: 0;
+  transition: 1s;
+}
+
+.Won .left .text {
   position: absolute;
-  top: 25%;
+  top: 50%;
   left: 50%;
+  width: 100%;
   transform: translate(-50%, -50%);
-  color: var(--wc);
-  font-size: 50px;
-  font-family: "jgj-B";
+  color: #fff;
   text-align: center;
   line-height: 1.2;
-  opacity: 0;
 }
 
-.Won.on .text {
-  animation: appear 1.5s;
-  animation-delay: 5s;
-  animation-fill-mode: forwards;
+.Won .left .title {
+  font-size: 50px;
+  margin-bottom: 40px;
+  font-family: "jgj-B";
+}
+
+.Won .left .text p {
+  font-size: 21px;
 }
 
 @keyframes ingredients {
@@ -357,8 +375,9 @@
   }
 
   to {
-    opacity: 0;
-    top: 75%
+    scale: 0.9;
+    opacity: 1;
+    top: 60%
   }
 }
 
@@ -375,3 +394,142 @@
 }
 
 
+.Every figure {
+  height: 100%;
+}
+
+.Every .stick {
+  display: block;
+  opacity: 0;
+  margin: 0 auto;
+  height: 200px;
+}
+
+.Every.on .stick {
+  animation: stick 4s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes stick {
+  0% {
+    transform: scale(0.2)
+  }
+
+  50% {
+    opacity: 1;
+    margin-top: 200px;
+    transform: scale(3) rotate(360deg);
+  }
+
+  100% {
+    opacity: 1;
+    margin-top: 300px;
+    transform: scale(3) rotate(360deg);
+  }
+}
+
+.Every.on .animate {
+  animation: UtoD 2s 2s;
+}
+
+.Every .tong2, .tong1 {
+  position: absolute;
+  opacity: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 700px;
+}
+
+.Every.on .tong2, .Every.on .tong1 {
+  animation: tong 2s 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes tong {
+  to {
+    bottom: 100px;
+    opacity: 1;
+  }
+}
+
+.Product{
+  padding: 100px 0;
+}
+
+.Product .container{
+  position: relative;
+  width: 1760px;
+  padding: 0 30px
+}
+
+.Product .container h2{
+  font-size: 40px;
+  font-family: "jgj-B";
+  margin-bottom: 15px;
+}
+
+.Product .container>p{
+  font-size: 21px;
+  font-family: "jgj-r";
+  margin-bottom: 60px;
+}
+
+.products_slide img{
+  max-width: 100%;
+}
+
+.products_slide  .slick-slide {
+  margin: 0 30px;
+}
+
+.products_slide  .slick-list {
+  margin: 0 -30px;
+}
+
+.products_slide img{
+  margin-bottom: 25px;
+}
+
+.products_slide figure p{
+  font-size: 25px;
+  font-family: "jgj-B";
+  margin-bottom: 20px;
+}  
+
+.products_slide figure .price{
+  font-size: 21px;
+  color: #333;
+  font-family: "jgj-r";
+  margin-bottom: 0;
+}
+
+.products_slide{
+  margin-bottom: 100px;
+}
+
+.Product .btn a{
+  display: block;
+  margin: 0 auto;
+  font-size: 18px;
+  width: 200px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  background: var(--mc);
+  color: var(--wc);
+  border-radius: 5px;
+}
+
+.Product .control{
+  position: absolute;
+  top: 0;
+  right: 30px;
+  font-size: 31px;
+  line-height: 40px;
+}
+
+.Product .control span{
+  margin: 0 50px;
+}
+*{outline: 1px solid pink;}
