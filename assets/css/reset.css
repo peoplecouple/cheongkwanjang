@@ -35,6 +35,11 @@ img {
   max-width: 100%;
 }
 
+::before, ::after {
+  box-sizing: border-box;
+}
+
+
 /*
 ===선택자===
 자식선택자 A > B => 메뉴 만들 때 많이 씀 (A의 자식 모든 B)

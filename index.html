@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="assets/css/slick.css">
   <link rel="stylesheet" href="assets/css/fullpage.css">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/main_responsive.css">
 </head>
 
 <body>
@@ -24,10 +25,58 @@
         </h1>
         <nav class="Gnb">
           <ul>
-            <li><a href="">브랜드</a></li>
+            <li><a href="">브랜드</a>
+              <!-- <ul class="snb sub_brand">
+                <li><a href="">정관장 홍삼</a>
+                  <ul class="ssub">
+                    <li><a href="">홍삼정</a></li>
+                    <li><a href="">에브리타임</a></li>
+                    <li><a href="">홍삼뿌리/달임액</a></li>
+                  </ul>
+                </li>
+                <li><a href="">전통</a>
+                  <ul class="ssub">
+                    <li><a href="">홍삼톤</a></li>
+                    <li><a href="">황진단</a></li>
+                    <li><a href="">홍삼원</a></li>
+                  </ul>
+                </li>
+                <li><a href="">타겟</a>
+                  <ul class="ssub">
+                    <li><a href="">화애락</a></li>
+                    <li><a href="">아이패스</a></li>
+                    <li><a href="">홍이장군</a></li>
+                    <li><a href="">아이키커</a></li>
+                  </ul>
+                </li>
+                <li><a href="">소재</a>
+                  <ul class="ssub">
+                    <li><a href="">알파프로젝트</a></li>
+                    <li><a href="">굿베이스</a></li>
+                    <li><a href="">천녹</a></li>
+                  </ul>
+                </li>
+              </ul> -->
+            </li>
+
             <li><a href="">정관장몰</a></li>
-            <li><a href="">뉴스&amp;이벤트</a></li>
-            <li><a href="">가맹점문의</a></li>
+
+            <li><a href="">뉴스&amp;이벤트</a>
+              <!-- <ul class="snb sub_event">
+                <li><a href="">정관장 소식</a></li>
+                <li><a href="">정관장 미디어</a></li>
+                <li><a href="">이벤트</a></li>
+                <li><a href="">SNS 소식</a></li>
+              </ul> -->
+            </li>
+
+            <li><a href="">가맹점문의</a>
+              <!-- <ul class="snb sub_join">
+                <li><a href="">매장 찾기</a></li>
+                <li><a href="">가맹점 소개</a></li>
+                <li><a href="">매장 개설 안내</a></li>
+              </ul> -->
+            </li>
           </ul>
         </nav>
         <div class="icons">
@@ -35,28 +84,14 @@
             <i class="xi-search"></i>
           </a>
           <a href="">
-            <i class="xi-bars"></i>
+            <i class="xi-user-o"></i>
           </a>
         </div>
       </div>
-
-      <!-- 
-      <div class="sideNav">
-        <ul>
-          <li><a href="#p02">홍삼이야기</a></li>
-          <li><a href="#p03">홍삼원</a></li>
-          <li><a href="#p04">에브리타임</a></li>
-          <li><a href="#p05">제품</a></li>
-          <li><a href="#P06">가맹문의</a></li>
-        </ul>
-      </div> -->
-
-
     </header>
 
+    <div id="fullpage">
 
-
-    <main id="fullpage">
       <section class="section MainVisual">
         <figure class="title">
           <img src="img/logo02.png" alt="">
@@ -71,7 +106,7 @@
         </div>
       </section>
 
-      <section class="section Story">
+      <section class="section Story" section_title="홍삼이야기">
         <figure class="slide">
           <div class="inner">
             <h2>홍삼을 만드는 절반은 자연의 이치입니다</h2>
@@ -100,11 +135,35 @@
               더욱 엄격하게 품질을 관리하고 있습니다.</p>
           </div>
         </figure>
+      </section>
+
+      <section class="section Jung" section_title="정관장 홍삼정">
+        <div class="container">
+          <div class="time">
+            <p>대한민국의 면역력을 지켜온</p>
+            <span>
+              <div class="memberCountCon"></div>
+              <p class="toInline"> 여년의 시간</p>
+            </span>
+          </div>
+          <div class="right">
+            <img class="elders" src="img/elders.jpg" alt="">
+            <img class="second_pic" src="img/product_with_bg09.jpg" alt="">
+          </div>
+
+          <div class="second">
+            <span>대한민국 전통<br>
+              정관장 홍삼정</span>
+            <p>오랜 시간 동안 변함없는 원칙과 정성으로<br>
+              최고의 자리를 지켜왔습니다. 전통을 지키며 역사를 이어온<br>
+              홍삼정, 대한민국의 자부심입니다.</p>
+          </div>
+        </div>
 
 
       </section>
 
-      <section class="section Won">
+      <!-- <section class="section Won" section_title="정관장 홍삼정">
         <div class="container">
           <div class="left">
             <img src="img/left_bg.jpg" alt="">
@@ -114,8 +173,9 @@
                 정관장 홍삼정
               </div>
               <p>
-                오랜 시간 동안 변함없는 원칙과 정성으로 최고의 자리를 지켜왔습니다.<br>
-                전통을 지키며 역사를 이어온 홍삼정, 대한민국의 자부심입니다.
+                오랜 시간 동안 변함없는 원칙과 정성으로 <br>
+                최고의 자리를 지켜왔습니다. 전통을 지키며 역사를 이어온 <br>
+                홍삼정, 대한민국의 자부심입니다.
               </p>
             </div>
           </div>
@@ -138,81 +198,219 @@
             </figure>
           </div>
         </div>
-      </section>
+      </section> -->
 
-      <section class="section Every">
+      <section class="section Every" section_title="에브리타임">
+
+        <div class="left">
+          면역력을
+        </div>
         <figure>
           <img class="tong1" src="img/everytime03.png" alt="">
           <img class="stick" src="img/everytime02.png" alt="">
           <img class="tong2" src="img/everytime01.png" alt="">
         </figure>
+        <div class="right">
+          1포하라
+        </div>
+        <div class="second">
+          <div class="left">
+            <img src="img/arc_l.png" class="l" alt="">
+            <img src="img/antiO.png" class="antiO effect" alt="">
+            <div class="antiO_txt">
+              <h3>항산화</h3>
+              <p>에 도움을 줄 수 있음</p>
+            </div>
+            <img src="img/better.png" class="better effect" alt="">
+            <div class="better_txt">
+              <h3>피로개선</h3>
+              <p>에 도움을 줄 수 있음</p>
+            </div>
+            <img src="img/circulation.png" class="circulate effect" alt="">
+            <div class="circulate_txt">
+              <h3>혈소판 응집 억제</h3>
+              <p>에 도움을 줄 수 있음</p>
+            </div>
+          </div>
+          <div class="right">
+            <img src="img/arc_r.png" class="r" alt="">
+            <img src="img/immun.png" class="immune effect" alt="">
+            <div class="immune_txt">
+              <h3>면역력 증진</h3>
+              <p>에 도움을 줄 수 있음</p>
+            </div>
+            <img src="img/memory.png" class="memory effect" alt="">
+            <div class="memory_txt">
+              <h3>기억력 개선</h3>
+              <p>에 도움을 줄 수 있음</p>
+            </div>
+            <img src="img/skin.png" class="skin effect" alt="">
+            <div class="skin_txt">
+              <h3>피부 미용</h3>
+              <p>에 도움을 줄 수 있음</p>
+            </div>
+          </div>
+        </div>
+
       </section>
 
-      <section class="section Product">
+      <section class="section Product" section_title="정관장 제품">
         <div class="container">
           <h2>정관장의 제품</h2>
           <p>정관장 브랜드의 대표 제품들을 만나보세요</p>
 
           <div class="products_slide">
             <figure>
-              <img src="img/pro01.jpg" alt="">
+              <div class="img">
+                <a href="">
+                  <img src="img/pro01.jpg" alt="">
+                </a>
+              </div>
               <p>홍삼정(240g)</p>
               <p class="price">211,000원</p>
             </figure>
             <figure>
-              <img src="img/pro02.jpg" alt="">
+              <div class="img">
+                <a href="">
+                  <img src="img/pro02.jpg" alt="">
+                </a>
+              </div>
               <p>홍삼정 에브리타임(30포)</p>
               <p class="price">102,000원</p>
             </figure>
             <figure>
-              <img src="img/pro03.jpg" alt="">
+              <div class="img">
+                <a href="">
+                  <img src="img/pro03.jpg" alt="">
+                </a>
+              </div>
               <p>황진단(30환)</p>
               <p class="price">660,000원</p>
             </figure>
             <figure>
-              <img src="img/pro04.jpg" alt="">
+              <div class="img">
+                <a href="">
+                  <img src="img/pro04.jpg" alt="">
+                </a>
+              </div>
               <p>홍삼달임액(60포)</p>
               <p class="price">499,000원</p>
             </figure>
             <figure>
-              <img src="img/pro05.jpg" alt="">
+              <div class="img">
+                <a href="">
+                  <img src="img/pro05.jpg" alt="">
+                </a>
+              </div>
               <p>홍삼달임액(60포)</p>
               <p class="price">499,000원</p>
             </figure>
             <figure>
-              <img src="img/pro06.jpg" alt="">
+              <div class="img">
+                <a href="">
+                  <img src="img/pro06.jpg" alt="">
+                </a>
+              </div>
               <p>홍삼달임액(60포)</p>
               <p class="price">499,000원</p>
             </figure>
             <figure>
-              <img src="img/pro07.jpg" alt="">
+              <div class="img">
+                <a href="">
+                  <img src="img/pro07.jpg" alt="">
+                </a>
+              </div>
+              <p>홍삼달임액(60포)</p>
+              <p class="price">499,000원</p>
+            </figure>
+            <figure>
+              <div class="img">
+                <a href="">
+                  <img src="img/pro08.jpg" alt="">
+                </a>
+              </div>
               <p>홍삼달임액(60포)</p>
               <p class="price">499,000원</p>
             </figure>
           </div>
 
           <div class="btn">
-            <a href="">정관장몰 바로가기</a>
+            <a href="">정관장몰 바로가기 <i class="xi-long-arrow-up"></i></a>
           </div>
 
           <div class="control">
             <i class="xi-angle-left"></i>
-            <span>1/1</span>
+            <span>1 / 8</span>
             <i class="xi-angle-right"></i>
           </div>
         </div>
       </section>
 
 
-      <section class="section Join">
+      <section class="section Join" section_title="가맹문의">
+        <div class="container">
+          <h2>
+            정관장의 120여년의 기록
+            역사를 함께할 가맹주를 모집합니다.
+          </h2>
+          <p>
+            1899년부터 2022년까지, 정관장이 지켜온 것은 120여 년의 긴 세월만은 아닙니다.<br>
+            인삼 종주국으로서의 제조 노하우와 정관장만의 투철한 장인 정신으로<br>
+            수 천년 고려인삼의 명예을 이어나가고 있습니다.
+          </p>
 
+          <div class="btn">
+            <a href="">자세히 보기 <i class="xi-long-arrow-up"></i></a>
+          </div>
+        </div>
       </section>
 
-    </main>`
+      <footer class="Footer section fp-auto-height">
+        <div class="container">
+          <div class="left">
+            <a href=""><img src="img/logo04.png" alt="" class="text_logo"></a>
+            <a href=""><img src="img/logo02_2.png" alt=""></a>
+          </div>
+          <div class="right">
+            <div class="l">
+              <ul>
+                <li><a href="">브랜드</a></li>
+                <li><a href="">정관장몰</a></li>
+                <li><a href="">뉴스&이벤트</a></li>
+              </ul>
+            </div>
+            <div class="c">
+              <ul><a href="">가맹점문의</a>
+                <li><a href="">매장 찾기</a></li>
+                <li><a href="">가맹점 소개</a></li>
+                <li><a href="">매장 개설 안내</a></li>
+              </ul>
+            </div>
+            <div class="r">
+              <select name="FAMILY SITE" id="">
+                <option disabled selected>FAMILY SITE</option>
+                <option value=""><a href="https://www.kgc.co.kr/">KGC인삼공사</a></option>
+                <option value=""><a href="https://www.kgcshop.co.kr/">정관장몰</a></option>
+              </select>
+              <ul>
+                <li><a href=""><span>개인정보처리방침</span></a></li>
+                <li><a href="">이메일무단수집거부</a></li>
+                <li><a href="">FAQ</a></li>
+              </ul>
+              <div class="icons">
+                <a href=""><i class="xi-facebook"></i> </a>
+                <a href=""><i class="xi-instagram"></i> </a>
+                <a href=""><i class="xi-youtube"></i> </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
 
-    <footer class="Footer">
+      <div class="cover">
 
-    </footer>
+      </div>
+    </div>
 
   </div>
 
