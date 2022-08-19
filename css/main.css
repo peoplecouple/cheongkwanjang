@@ -687,12 +687,13 @@ section::after {
   transition: 0.5s;
 }
 
-.products_slide img {
-  transition: 0.5s;
-}
 
 .Product .products_slide .slick-center .img {
   border: 4px solid var(--mc);
+}
+
+.products_slide img {
+  transition: 0.5s;
 }
 
 .products_slide img:hover {
@@ -1699,6 +1700,13 @@ section::after {
   .Product .products_slide .img {
     overflow: hidden;
     margin-bottom: 25px;
+    border: none;
+
+  }
+
+
+  .Product .products_slide .slick-center .img {
+    border: none;
   }
 
   .products_slide img {
