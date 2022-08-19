@@ -270,12 +270,12 @@ section::after {
 
 .Story .slide.on .inner h2 {
   opacity: 1;
-
+  transition: 0.5;
 }
 
 .Story .slide.on .inner p {
   opacity: 1;
-  transition: 1s 1.2s;
+  transition: 1s 1s;
 }
 
 .Story figure:nth-child(1) {
@@ -413,7 +413,7 @@ section::after {
 }
 
 .Jung.on .second {
-  animation: second_show 1s 4s;
+  animation: second_show 1s 5s;
   animation-fill-mode: forwards;
 }
 
@@ -658,28 +658,14 @@ section::after {
   }
 }
 
-*{outline: 1px solid pink;}
-
 .Product {
-  padding: 100px 0;
+  padding: 100px 0 0 00;
 }
 
 .Product .container {
   position: relative;
   width: 1760px;
   padding: 0 30px
-}
-
-.Product .container h2 {
-  font-size: 0px;
-  font-family: "jgj-B";
-  margin-bottom: 15px;
-}
-
-.Product .container>p {
-  font-size: 0px;
-  font-family: "jgj-r";
-  margin-bottom: 100px;
 }
 
 .products_slide img {
@@ -697,10 +683,16 @@ section::after {
 .Product .products_slide .img {
   overflow: hidden;
   margin-bottom: 25px;
+  border: 4px solid transparent;
+  transition: 0.5s;
 }
 
 .products_slide img {
   transition: 0.5s;
+}
+
+.Product .products_slide .slick-center .img {
+  border: 4px solid var(--mc);
 }
 
 .products_slide img:hover {
@@ -721,7 +713,7 @@ section::after {
 }
 
 .products_slide {
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 
 .Product .btn a {
@@ -739,7 +731,7 @@ section::after {
 
 .Product .control {
   position: absolute;
-  top: 0;
+  top: -90px;
   right: 30px;
   font-size: 25px;
   line-height: 40px;
@@ -1392,7 +1384,7 @@ section::after {
   }
 
   .Jung .second p {
-    font-size: 4vw;
+    font-size: 3.5vw;
   }
 
   .Jung.on .second {
@@ -1615,13 +1607,13 @@ section::after {
 
     66% {
       opacity: 1;
-      margin-top: 350px;
+      margin-top: 400px;
       transform: scale(3) rotate(360deg);
     }
 
     100% {
       opacity: 1;
-      margin-top: 350px;
+      margin-top: 400px;
       transform: scale(3) rotate(360deg) translateX(-300%);
     }
   }
@@ -1653,13 +1645,13 @@ section::after {
     }
 
     66% {
-      bottom: 270px;
+      bottom: 300px;
       opacity: 1;
       transform: translateX(-50%)
     }
 
     100% {
-      bottom: 270px;
+      bottom: 300px;
       opacity: 1;
       transform: translateX(-260%);
     }
@@ -1737,11 +1729,11 @@ section::after {
   .Product .btn a {
     display: block;
     margin: 0 auto;
-    font-size: 2.5vw;
-    width: 30vw;
-    height: 7vw;
+    font-size: 3vw;
+    width: 33vw;
+    height: 8vw;
     text-align: center;
-    line-height: 7vw;
+    line-height: 8vw;
     background: var(--mc);
     color: var(--wc);
     border-radius: 5px;
@@ -1749,7 +1741,7 @@ section::after {
 
   .Product .control {
     position: absolute;
-    top: 8%;
+    top: -90px;
     right: 30px;
     font-size: 3vw;
     line-height: 40px;
@@ -1778,7 +1770,7 @@ section::after {
     transform: translateY(-50px);
     font-family: "jgj-B";
     font-size: 5vw;
-    margin-bottom: 4vw;
+    margin-bottom: 6vw;
   }
 
   .Join.on h2 {
@@ -1793,7 +1785,7 @@ section::after {
     transform: translateY(-50px);
     font-family: "jgj-r";
     font-size: 2.5vw;
-    margin-bottom: 4vw;
+    margin-bottom: 6vw;
     line-height: 1.3;
   }
 
@@ -1807,11 +1799,11 @@ section::after {
     opacity: 0;
     display: block;
     margin: 0 auto;
-    font-size: 2.5vw;
-    width: 25vw;
-    height: 7vw;
+    font-size: 3vw;
+    width: 30vw;
+    height: 8vw;
     text-align: center;
-    line-height: 7vw;
+    line-height: 8vw;
     background: var(--mc);
     color: var(--wc);
     border-radius: 5px;

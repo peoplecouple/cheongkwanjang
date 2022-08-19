@@ -89,7 +89,7 @@ $(function () {
     infinite: true,
     slidesToShow: 3,
     centerMode: true,
-    centerPadding: '200px',
+    centerPadding: '0',
     arrows: false,
     responsive: [
       {
