@@ -1,18 +1,17 @@
 $(function () {
+  var $this_s = $(".slide");
   $('#fullpage').fullpage({
+    licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
     controlArrows: false,
     slidesNavigation: true,
     slidesNavPosition: 'bottom',
     responsiveWidth: 768,
+    scrollingSpeed: 1500,
     loopHorizontal: false,
     anchors: ['main', 'p01', 'p02', 'p03', 'p04', 'p05', 'footer'],
     navigation: true,
     navigationPosition: 'left',
     navigationTooltips: ['Main', '홍삼이야기', '홍삼정', '에브리타임', '제품', '가맹문의', 'Bottom'],
-    afterSlideLoad: function (section, origin, destination, direction) {
-      $('.Story .fp-slides figure').eq(destination.index).addClass('on').siblings().removeClass('on')
-    },
-
     afterLoad: function (origin, destination) {
       if (destination.anchor != 'main') {
         $('.Header').addClass('on')
@@ -56,26 +55,18 @@ $(function () {
           }
         });
       }
-    }
+      //슬라이드 1번에 애니메이션 주는거
+      if (destination.anchor == 'p01') {
+        $('.Story figure:nth-child(1)').addClass('on')
+      }
+    },
+
+    afterSlideLoad: function (section, origin, destination, direction) {
+      $this_s.eq(destination.index).addClass("on").siblings().removeClass("on");
+    },
+
   });
 
-  // if($(window).width() <= 768){
-  //   var g_interval;
-  //   $('#fullpage').fullpage({
-  //     afterLoad: function (origin, destination, direction) {
-  //       clearInterval(g_interval);
-
-  //       // 1000 milliseconds lapse
-  //       const lapse = 1000;
-
-  //       if(destination.item.querySelectorAll('.fp-slides').length){
-  //         g_interval = setInterval(function () {
-  //           fullpage_api.moveSlideRight();
-  //         }, lapse);
-  //       }
-  //     }
-  //   })
-  // }
 
   //슬라이드 마우스휠로 움직이게
   $(".Story").on("wheel", function (e) {
@@ -92,10 +83,13 @@ $(function () {
   }
 
 
+
+
   $('.products_slide').slick({
     infinite: true,
-    slidesToShow: 4,
-    slidesToScroll: 1,
+    slidesToShow: 3,
+    centerMode: true,
+    centerPadding: '200px',
     arrows: false,
     responsive: [
       {

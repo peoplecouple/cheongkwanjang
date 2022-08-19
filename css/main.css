@@ -193,13 +193,13 @@ section::after {
   height: 100vh;
   background: var(--mc);
   z-index: 100;
-  animation: slide_up 1.5s 0.5s;
+  animation: fade_out 3.5s 0.5s;
   animation-fill-mode: forwards;
 }
 
-@keyframes slide_up {
+@keyframes fade_out {
   to {
-    top: -100%;
+    opacity: 0;
   }
 }
 
@@ -268,12 +268,12 @@ section::after {
 }
 
 
-.Story figure.on .inner h2 {
+.Story .slide.on .inner h2 {
   opacity: 1;
 
 }
 
-.Story figure.on .inner p {
+.Story .slide.on .inner p {
   opacity: 1;
   transition: 1s 1.2s;
 }
@@ -428,6 +428,7 @@ section::after {
 .Every {
   position: relative;
   overflow-x: hidden;
+  background: #FEFAF9;
 }
 
 .Every>div {
@@ -656,6 +657,8 @@ section::after {
     opacity: 1;
   }
 }
+
+*{outline: 1px solid pink;}
 
 .Product {
   padding: 100px 0;
@@ -1664,8 +1667,10 @@ section::after {
 
 
   .Product {
-    border-top: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #FEFAF9;
+    ;
+    border-bottom: 1px solid #f2eae9;
+    ;
     padding: 5vw 0;
   }
 
